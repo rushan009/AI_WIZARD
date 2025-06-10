@@ -273,7 +273,7 @@
     /* padding: 2px; */
 }
 .fpart{
-    background-image: url(/video/20945257.jpg);
+    background-image: url(video/20945257.jpg);
     background-size: contain;
     display: flex;
     flex-wrap: wrap;
@@ -299,7 +299,7 @@
     line-height: 140px;
     color: transparent;
     -webkit-text-stroke:1px white;
-    background: url(/video/output-onlinepngtools.png);
+    background: url(video/output-onlinepngtools.png);
     -webkit-background-clip: text;
     background-position: 0,0;
     animation: aniflow1 10s linear infinite;
@@ -327,13 +327,13 @@
 }
 
 #fpart1{
-    background-image: url(/video/20945257.jpg);
+    background-image: url(video/20945257.jpg);
 }
 #fpart2{
-    background-image: url(/video/6477404.jpg);
+    background-image: url(video/6477404.jpg);
 }
 #fpart3{
-    background-image: url(/video/6159289.jpg);
+    background-image: url(video/6159289.jpg);
 }
 
 .carddis{
