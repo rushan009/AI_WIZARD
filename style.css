@@ -273,7 +273,9 @@
     /* padding: 2px; */
 }
 .fpart{
-    background-image: url(video/20945257.jpg);
+    background-image: url('video/20945257.jpg');
+    background-image: url('../video/20945257.jpg');
+    background-image: url('./video/20945257.jpg');
     background-size: contain;
     display: flex;
     flex-wrap: wrap;
