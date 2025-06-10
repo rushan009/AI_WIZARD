@@ -1,0 +1,426 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.frst-page{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(31, 4, 66); */
+
+}
+.navigation{
+    top: 0;
+    left: 0;
+    position: sticky;
+    padding: 20px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 30px;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    padding: 10px 20px;
+    position: relative;
+}
+.navigation nav ul li::after{
+    content: "";
+    height: 0%;
+    width: 0%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+   
+    /* background-color: aqua; */
+    
+    transition: all 0.5s;
+}
+.navigation nav ul li::before{
+    content: "";
+    height: 0%;
+    width: 0%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+   /* background-color: aqua; */
+    transition: all 0.5s;
+}
+
+.navigation nav ul li:hover::after{
+    border-top: 3px solid blueviolet;
+    border-right: 3px solid blueviolet;
+    transform: rotate(360deg);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+.navigation nav ul li:hover::before{
+    z-index: -1;
+    border-bottom: 3px solid blueviolet;
+    border-left: 3px solid blueviolet;
+    transform: rotate(360deg);
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+.navigation nav ul li a{
+    color: blueviolet;
+    text-decoration: none;
+    transition: all 1s linear;
+    font-weight: 600;
+    
+}
+.logo{
+    color: blueviolet;
+    font-family:"Edu NSW ACT Foundation", cursive ;
+    font-size: 30px;
+    font-weight: 700;
+    font-stretch: wider;
+   
+
+    
+
+}
+
+.logo p{
+    overflow: hidden;
+    width: 100%;
+    border-right: 5px solid blueviolet;
+    animation: 
+    typing 4s steps(9) infinite ,
+     cursor 0.8s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50%{
+        border-color: transparent;
+    }
+    
+}
+@keyframes typing {
+    0%{
+        width: 0%;
+
+    }
+    50%{
+        width: 100%;
+
+    }
+    100%{
+        width: 0%;
+
+    }
+
+}
+.video video{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.content1{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    width: 30%;
+    height: 80%;
+    margin-left: 50px;
+}
+.color{
+    color: blueviolet;
+}
+.header1 h1{
+    font-family:"Edu NSW ACT Foundation", cursive ;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 5px;
+}
+.expl1{
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.lgsg{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+.login{
+    margin-right: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    /* border-radius: 10px; */
+    border: 3px solid rgb(235, 235, 235);
+    position: relative;
+    transition: border 0.1s linear;
+    
+}
+.login:hover{
+    border-color: blueviolet;
+}
+.login::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: blueviolet;
+    transition: transform 0.5s;
+    transform-origin: 0.0;
+    transform: scaleX(1);
+}
+
+
+.login:hover::before{
+    transform: scaleX(0);
+}
+
+
+
+
+.signup{
+    margin-left: 20px;
+    background-color: transparent;
+    border: 3px solid blueviolet;
+    color: white;
+    padding: 10px 15px;
+    /* border-radius: 10px; */
+    transition: border 1s liner;
+    position: relative;
+}
+.signup:hover{
+    border-color: white;
+}
+
+.signup::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;  
+    z-index: -1;
+    background-color: blueviolet;
+    transition: transform 0.5s;
+    transform-origin: 0.0;
+    transform: scaleX(0);
+}
+
+.signup:hover::before{
+    transform: scaleX(1);
+}
+
+.FEATURES{
+    background-color: rgb(33, 15, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:60px 30px;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+
+}
+
+.container{
+    /* background-color: aqua; */
+    width: 400px;
+    height: 300px;
+    /* height: 100px; */
+    margin: 2px 30px;
+    padding: 10px;
+}
+.parent_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style:preserve-3d ;
+    padding: 10px;
+}
+
+.container:hover > .card{
+    transform: rotateY(180deg);
+}
+
+.fpart, .bpart{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+ 
+    /* padding: 2px; */
+}
+.fpart{
+    background-image: url(/video/20945257.jpg);
+    background-size: contain;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.fpart h4{
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+    
+}
+.bpart{
+    background-color: rgb(33, 15, 51);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title h1{
+    font-size: 80px;
+    line-height: 140px;
+    color: transparent;
+    -webkit-text-stroke:1px white;
+    background: url(/video/output-onlinepngtools.png);
+    -webkit-background-clip: text;
+    background-position: 0,0;
+    animation: aniflow1 10s linear infinite;
+}
+@keyframes aniflow1 {
+    100%{
+        background-position: 2000px, 0;
+    }
+}
+
+.expl2 p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.bpart h6{
+    color: blueviolet;
+    font-size: 20px;
+    font-family:"Edu NSW ACT Foundation", cursive  ;
+}
+.bpart p{
+    color: white;
+    font-family:cursive;
+}
+
+#fpart1{
+    background-image: url(/video/20945257.jpg);
+}
+#fpart2{
+    background-image: url(/video/6477404.jpg);
+}
+#fpart3{
+    background-image: url(/video/6159289.jpg);
+}
+
+.carddis{
+ 
+    font-size: 40px;
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+.carddis h1{
+
+
+    font-size: 40px;
+    -webkit-text-stroke: 2px blueviolet;
+    position: relative;
+   
+   
+}
+.carddis h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    -webkit-text-stroke: 2px blueviolet;
+    color: blueviolet;
+    overflow: hidden;
+    border-right: 2px solid blueviolet;
+    animation: flowani 4s infinite;
+}
+
+@keyframes flowani {
+    0%, 10%, 100%{
+        width: 0%;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+   
+
+}
+#carddis2{
+    justify-content: start;
+}
+.secondparent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0px;
+
+}
+
+.versions{
+    background-color: rgb(33, 15, 51);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+}
+
+.card2{
+    color: black;
+    background-color: white;
+    height: 500px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 40px;
+}
+
+
+.img img{
+    object-fit: contain;
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+}
+.content2{
+    padding: 10px;
+}
+.content2 h4{
+    text-align: center;
+    color: blueviolet;
+    font-size: 30px;
+}
